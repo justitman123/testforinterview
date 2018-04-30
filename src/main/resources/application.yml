@@ -1,0 +1,46 @@
+spring.jmx:
+   enabled: false
+
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: utf-8
+
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    continueOnError: false
+    initialize: true
+    #schema: classpath:/db/schema.sql
+    #data:  classpath:/db/populatedb.sql
+    tomcat:
+      testWhileIdle: true
+      validationQuery: SELECT 1
+      max-active: 1000
+      min-idle: 5
+      max-wait: 10000
+      max-idle: 5
+      initial-size: 5
+      test-on-borrow: true
+      remove-abandoned: true
+      test-on-connect: true
+      validation-interval: 10000
+      log-validation-errors: true
+      jdbc-interceptors: "ConnectionState"
+      time-between-eviction-runs-millis: 1000000
+      min-evictable-idle-time-millis: 1000000
+      test-on-return: false
+      log-abandoned: true
+      remove-abandoned-timeout: 2000
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
