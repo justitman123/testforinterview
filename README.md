@@ -1,4 +1,4 @@
-<img src="https://travis-ci.org/justitman123/testforinterview.svg?branch=master" alt="Build Status" />
+[![Build Status](https://travis-ci.org/justitman123/testforinterview.svg?branch=master)](https://travis-ci.org/justitman123/testforinterview)
 <br>
 Приложения создавалось с использованием: Java 8, PostgreSQL и Maven.
 <br>
